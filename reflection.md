@@ -62,7 +62,7 @@ Document at least 3 bugs you found. Add rows as needed.
     being updated at the right moment. I was already uncertain of how the proposed solution would work, and was proven\
     correct when I entered a random string as a guess ("Attempts" and "Attempts left: " remained unchanged). What the AI\
     gave was an incorrect suggestion because if the user did not enter a valid guess, their input would not have been\
-    recognized as an actual attempt (as represented by the incrementing of the attempts object). I fixed this issue by
+    recognized as an actual attempt (as represented by the incrementing of the attempts object). I fixed this issue by\
     keeping the "st.session_state.attempts += 1" line at its original spot.**
 ---
 
@@ -73,7 +73,7 @@ Document at least 3 bugs you found. Add rows as needed.
     testing sample inputs on the application and running the pytest application. I also ran all tests in
     test_game_logic.py at the very end.**
 - Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+  and what it showed you about your code.\
   **This was the output for the following test before I refactored the test_game_logic.py logic:**\
        **"def test_winning_guess():**
             **# If the secret is 50 and guess is 50, it should be a win**
