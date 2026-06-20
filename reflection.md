@@ -88,7 +88,7 @@ Document at least 3 bugs you found. Add rows as needed.
 
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?\
     Whenever you run the app using Streamlit, it will automatically open a new browser tab that contains the web application. It
     does this by connecting to a port. After you save your changes to the file, Streamlit will rerun on its own without you having
     to terminate the running session.
@@ -97,11 +97,11 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-  The chat modes are very helpful because it emphasizes the idea that the user has full control of how they want to receive
-  information. The idea that edits can't be performed directly on the code unless the user approves in some modes is important in
-  order to avoid unexpected behavior due to making too many modifications at once. The AI assistant I used clearly highlighted the
-  potential differences in code logic so that the user can easily follow.
+  - This could be a testing habit, a prompting strategy, or a way you used Git.\
+    The chat modes are very helpful because it emphasizes the idea that the user has full control of how they want to receive
+    information. The idea that edits can't be performed directly on the code unless the user approves in some modes is important in
+    order to avoid unexpected behavior due to making too many modifications at once. The AI assistant I used clearly highlighted
+    the potential differences in code logic so that the user can easily follow.
 - What is one thing you would do differently next time you work with AI on a coding task?
     I would be more specific in my prompts when creating new test cases.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
