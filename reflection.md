@@ -12,7 +12,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   **When I enter something that is higher than the secret, the hint says to "GO HIGHER".**\
   **The attempts per difficulty are inconsistent(?); there are more attempts allowed for normal ones than easy ones.**\
   **This would make sense if the range was less for the easy level but it is actually 1-100 for all three modes.**\
-  **I don't think it lets me guess after I click "New Game".**
+  **I don't think it lets me guess after I click "New Game", and the attempts or score fields do not reset.**
 
 **Bug Reproduction Log**
 
@@ -22,7 +22,7 @@ Document at least 3 bugs you found. Add rows as needed.
 |-------|-------------------|-----------------|------------------------|
 | Guess of 91 | "Too Low" hint shown | "Too High" hint shown | none |
 | Guess of 93 | "Too High" hint shown | "Too Low" hint shown | none |
-| New Game Button | Game state resets | Guessing does not work | none |
+| New Game Button | Game state resets | Guessing does not work and relevant fields are not reset | none |
 
 ---
 

@@ -33,8 +33,6 @@ if "last_difficulty" not in st.session_state:
 if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
-#if "attempts" not in st.session_state:
-#    st.session_state.attempts = 1
 # FIX: Modified attempts resetting to best simulate that attempts are yet to 
 # be recorded using agent mode
 if "attempts" not in st.session_state:
@@ -86,9 +84,9 @@ with col3:
 if new_game:
     st.session_state.attempts = 0
     # FIX: Generated random number in correct range and reset status using agent mode
-    ## added status line and changed bounds of random int in following line (originally between 1 and 100)
     st.session_state.secret = random.randint(low, high)
     st.session_state.status = "playing"
+    st.session_state.score = 0
     st.success("New game started.")
     st.rerun()
 
@@ -108,15 +106,8 @@ if submit:
         st.error(err)
     else:
         # added the below line
-        # st.session_state.attempts += 1
         st.session_state.history.append(guess_int)
         # FIX: Ensured that secret is always an int using agent mode
-        ## removed conditional statements altogether:
-        #if st.session_state.attempts % 2 == 0:
-            #secret = str(st.session_state.secret)
-        #else:
-            #secret = st.session_state.secret
-        # FIXME: Logic breaks here
         secret = st.session_state.secret
 
         outcome, message = check_guess(guess_int, secret)
