@@ -4,7 +4,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
+- What did the game look like the first time you ran it?\
   The game seemed to have a lot of functionalities described. However, some of them did not work in the expected way. This may
   cause confusion on the user end when they are trying to frame the purpose of the game.
 - List at least two concrete bugs you noticed at the start  
@@ -31,27 +31,26 @@ Document at least 3 bugs you found. Add rows as needed.
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
     Claude Code
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-    AI suggestion: "if new_game:
-        st.session_state.attempts = 0
-        st.session_state.secret = random.randint(1, 100)
-        st.session_state.status = "playing"  # <-- ADD THIS
-        st.success("New game started.")
-        st.rerun()
-    This ensures the status is reset back to "playing" when starting a new game."
+    AI suggestion: "if new_game:\
+        st.session_state.attempts = 0\
+        st.session_state.secret = random.randint(1, 100)\
+        st.session_state.status = "playing"  # <-- ADD THIS\
+        st.success("New game started.")\
+        st.rerun()\
+    This ensures the status is reset back to "playing" when starting a new game."\
     The original code did not let the user play a new game (it basically glitched and behaved unexpectedly).\
     This suggestion was helpful because once the script was rerun to start a new game, the status was in "playing" mode.\
     This communicated the idea that the user had started a new game from scratch (with relevant fields reset).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-    AI suggestion: "st.session_state.attempts += 1 # CUT THIS LINE HERE
-    ok, guess_int, err = parse_guess(raw_guess)
-
-    if not ok:
-        st.session_state.history.append(raw_guess)
-        st.error(err)
-    else:
-        st.session_state.attempts += 1 # PASTE LINE HERE
-        st.session_state.history.append(guess_int)
-        secret = st.session_state.secret"
+    AI suggestion: "st.session_state.attempts += 1 # CUT THIS LINE HERE\
+    ok, guess_int, err = parse_guess(raw_guess)\
+    if not ok:\
+      st.session_state.history.append(raw_guess)\
+      st.error(err)\
+    else:\
+      st.session_state.attempts += 1 # PASTE LINE HERE\
+      st.session_state.history.append(guess_int)\
+      secret = st.session_state.secret"
     The AI was getting a little confused when I was trying to solve the problem of the notification history list being updated at\
     the right moment. I was already uncertain of how the proposed solution would work, and was proven correct when I entered a\
     random string as a guess ("Attempts" and "Attempts left: " remained unchanged). What the AI gave was an incorrect suggestion\
