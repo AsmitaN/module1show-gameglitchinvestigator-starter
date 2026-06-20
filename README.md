@@ -25,19 +25,28 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
+- [ ] Describe the game's purpose.\
+      **This is a guessing game where the user can guess a secret number using multiple attempts. The attempt limit varies based
+      on difficulty level. The player can choose to play with or without hints, but if they choose to play with hints; they will be
+      provided after each incorrect guess is recorded.**
+- [ ] Detail which bugs you found.\
+      **The hints that were displayed were incorrect. In fact, they would mislead the player to supply guesses that are even
+      further from the secret number. The game was also not getting reset after the the "New Game" button was clicked.**
 - [ ] Explain what fixes you applied.
+      **I made the hints more suitable based on the result of the comparison between the most recent guess and the secret number.
+      I also made sure that the secret numbers were being computed based on the difficulty-specific range. Additionally, more
+      adjustments to the new game logic were made so that the user can still make guesses successfully.**
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. <!-- Describe this step --> User enters a guess of 50
+2. <!-- Describe this step --> Game returns "Too High"
+3. <!-- Describe this step --> User enters a guess of 30
+4. <!-- Describe this step --> Game returns "Too Low"
+5. <!-- Add more steps as needed --> Score updates after each guess (reduces if guess is incorrect)
+6. <!-- Describe this step --> Game ends after the correct guess
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
