@@ -34,11 +34,11 @@ Document at least 3 bugs you found. Add rows as needed.
   result).\
     **AI suggestion:** "```if new_game:```\
         ```
-        st.session_state.attempts = 0\
-        st.session_state.secret = random.randint(1, 100)\
-        st.session_state.status = "playing"  # <-- ADD THIS\
-        st.success("New game started.")\
-        st.rerun()\
+        st.session_state.attempts = 0
+        st.session_state.secret = random.randint(1, 100)
+        st.session_state.status = "playing"  # <-- ADD THIS
+        st.success("New game started.")
+        st.rerun()
         ```
         This ensures the status is reset back to "playing" when starting a new game."\
     **The original code did not let the user play a new game (it basically glitched and behaved unexpectedly).**\
@@ -50,14 +50,15 @@ Document at least 3 bugs you found. Add rows as needed.
   result).\
     **AI suggestion:** "```st.session_state.attempts += 1 # CUT THIS LINE HERE```\
       ```
-      ok, guess_int, err = parse_guess(raw_guess)**\
-      if not ok:**\
-        **st.session_state.history.append(raw_guess)\
-        st.error(err)\
-      else:\
-        st.session_state.attempts += 1 # PASTE LINE HERE\
-        st.session_state.history.append(guess_int)\
-        secret = st.session_state.secret```"\
+      ok, guess_int, err = parse_guess(raw_guess)**
+      if not ok:**
+        **st.session_state.history.append(raw_guess)
+        st.error(err)
+      else:
+        st.session_state.attempts += 1 # PASTE LINE HERE
+        st.session_state.history.append(guess_int)
+        secret = st.session_state.secret
+      ```"
     **The AI was getting a little confused when I was trying to solve the problem of the notification history list\
     being updated at the right moment. I was already uncertain of how the proposed solution would work, and was proven\
     correct when I entered a random string as a guess ("Attempts" and "Attempts left: " remained unchanged). What the AI\
