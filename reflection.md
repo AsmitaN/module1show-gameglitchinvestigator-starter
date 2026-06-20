@@ -32,7 +32,7 @@ Document at least 3 bugs you found. Add rows as needed.
     **Claude Code**
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the
   result).\
-    **AI suggestion:** "```if new_game:```\
+    **AI suggestion:** "```if new_game:```
         ```
         st.session_state.attempts = 0
         st.session_state.secret = random.randint(1, 100)
@@ -48,7 +48,7 @@ Document at least 3 bugs you found. Add rows as needed.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you
   verified the
   result).\
-    **AI suggestion:** "```st.session_state.attempts += 1 # CUT THIS LINE HERE```\
+    **AI suggestion:** "```st.session_state.attempts += 1 # CUT THIS LINE HERE```
       ```
       ok, guess_int, err = parse_guess(raw_guess)**
       if not ok:**
